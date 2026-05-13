@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lal Mirch · Masala Lab</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="topbar lalmirch-top">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-name">MASALA LAB</span>
+      <span class="flask">⚗</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="haldi.html">Haldi</a>
+      <a href="lalmirch.html" class="active">Lal Mirch</a>
+      <a href="garam_masala.html">Garam Masala</a>
+      <a href="about.html">About</a>
+      <a href="submission.html">Submission</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container detail-page">
+  <div class="detail-grid">
+
+    <div>
+      <div class="viewer-wrap" id="viewer-wrap" data-model="lalmirch">
+        <div id="loader-msg">Loading specimen…</div>
+      </div>
+
+      <div class="controls">
+        <button id="btn-wireframe" class="btn-pill secondary">Wireframe</button>
+        <button id="btn-animate" class="btn-pill secondary">Open Lid</button>
+        <button id="btn-rotate" class="btn-pill secondary">Auto Rotate</button>
+        <button id="btn-reset" class="btn-pill secondary">Reset View</button>
+      </div>
+
+      <div class="lighting-box">
+        <p class="kicker" style="margin-bottom: 0.4rem;">Lighting</p>
+        <label>Ambient</label>
+        <input type="range" id="light-ambient" min="0" max="3" step="0.05" value="0.6">
+        <label>Spotlight</label>
+        <input type="range" id="light-spot" min="0" max="5" step="0.1" value="2">
+        <button id="btn-headlight" class="btn-pill secondary" style="margin-top: 0.8rem; font-size: 0.75rem; padding: 0.4rem 1rem;">Headlight: ON</button>
+      </div>
+    </div>
+
+    <aside class="info-block">
+      <p class="kicker">Spice 02</p>
+      <h1 style="color: var(--chilli);">Lal Mirch</h1>
+      <p class="latin"> Red chilli</p>
+      <hr class="divider">
+      <div class="data-row"><dt>Origin</dt><dd>Guntur, IN</dd></div>
+      <div class="data-row"><dt>Batch</dt><dd>ML-002-C</dd></div>
+      <div class="data-row"><dt>Heat</dt><dd>Hot</dd></div>
+      <div class="data-row"><dt>Net wt.</dt><dd>50g</dd></div>
+      <hr class="divider">
+      <p class="fact">
+        
+      </p>
+      <p class="fact">
+     
+      </p>
+    </aside>
+
+  </div>
+
+  <div class="next-jar">
+    <a href="garam_masala.html">Next: Garam Masala →</a>
+  </div>
+</main>
+
+<footer class="bottom">
+  <div class="container">
+    <small>© 2026 Masala Lab · <a href="about.html">About</a> · <a href="submission.html">Submission</a></small>
+  </div>
+</footer>
+
+<script type="module" src="js/viewer.js"></script>
+</body>
+</html>

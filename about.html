@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About · Masala Lab</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-name">MASALA LAB</span>
+      <span class="flask">⚗</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="haldi.html">Haldi</a>
+      <a href="lalmirch.html">Lal Mirch</a>
+      <a href="garam_masala.html">Garam Masala</a>
+      <a href="about.html" class="active">About</a>
+      <a href="submission.html">Submission</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-content">
+
+    <p class="kicker">About</p>
+    <h1>The science of flavour</h1>
+
+    <p>
+      Masala Lab is a spice brand I created for this module. The brief asked us to make a 3D web app showing three branded products. Instead of doing the usual coke bottle example, I decided to make something based around Indian/ Pakistani spices because it felt more personal to me as I love cooking and I am Pakistani. The idea behind Masala Lab is to show these spices in a clean 3d model. The name is also a small nod to Krish Ashok’s book ‘Masala Lab’.
+    </p>
+
+    <h2>The three jars</h2>
+    <p>
+      The site features three spices: Haldi (turmeric), Lal Mirch (red
+      chilli), and Garam Masala (the house blend). They share the same jar
+      design but each has its own label, information on the label and spice colour.
+      objects.
+    </p>
+
+    <h2>Design</h2>
+    <p>
+      I chose a magazine style layout. The homepage scrolls and each jar gets its own
+      section and a coloured stripe matching its spice. If you click
+      a jar's name you go to its own page with a 3D viewer.
+    </p>
+    <p>
+      The colour palette is built around the cream and orange from the labels
+      The header bar on each jar's detail page matches the colour of the spivce.
+    </p>
+    <p>
+      Typography is a mix: Georgia for headings and sans-serif for the other labels.
+    </p>
+
+    <h2>3D modelling</h2>
+    <p>
+      Each jar was built in Blender and exported as glTF (.glb). The jar body
+      is three part transparent glass mesh (top rim, body, bottom rim). A separate curved label mesh sits on
+      the front rather than a flat UV projection, so the label keeps its
+      aspect ratio and is readable from any angle. The lid has a 70 frame opening animation that Three.js implements
+      via AnimationMixer.
+    </p>
+  
+
+    <h2>Web implementation</h2>
+    <p>
+      The 3D viewer uses Three.js loaded as an ES module using an import map.
+      (the approach from the supplementary handout). Each  page reads
+      its model filename from a data attribute on the viewer container.
+    </p>
+    <p>
+      Features available on each detail page:
+    </p>
+    <ul>
+      <li>Orbit / zoom</li>
+      <li>Wireframe toggle </li>
+      <li>Lid open / close animation</li>
+      <li>Auto-rotate and a reset-view button</li>
+      <li>Lighting controls a headlight on/off</li>
+    </ul>
+
+    <h2>Deeper understanding</h2>
+    <p>
+    
+    </p>
+    <ul>
+      <li>The jar body is made of see-through glass so you can view the spice inside</li>
+      <li>The label is a separate curved shape on the front of the jar, not just a flat image wrapped around it</li>
+      <li>The lid opens and closes with an animation when you click the button</li>
+      <li>One JavaScript file handles the 3D viewer on all three spice pages, instead of duplicating code</li>
+    
+
+    <h2>Testing</h2>
+    <p>
+  I tested the site in Chrome and Safari and on my iPhone. The 3D
+  jars load on each page, you can drag to rotate them on a mouse or with your
+  finger on a phone.
+  the wireframe button works on every part of the jar and
+  the lid opens and closes when you click and the animation. I built the site using VS Code.
+  
+
+  </div>
+</main>
+
+<footer class="bottom">
+  <div class="container">
+    <small>© 2026 Masala Lab · <a href="index.html">Home</a> · <a href="submission.html">Submission</a></small>
+  </div>
+</footer>
+
+</body>
+</html>
